@@ -1,0 +1,42 @@
+.home {
+  text-align: center;
+  padding: 8rem 2.4rem;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  margin-top: 6.4rem;
+  width: 100rem;
+  margin: 4.8rem auto;
+}
+
+.home h1 {
+  font-size: 7.4rem;
+  font-weight: bold;
+  margin-bottom: -1rem;
+}
+
+.home p {
+  font-size: 2.4rem;
+  color: var(--color-text--2);
+}
+
+.home button {
+  background: var(--color-brand--1);
+  color: var(--color-text--1);
+  padding: 1.2rem 2.4rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 2.4rem;
+}
+
+.home button:hover {
+  color: var(--color-brand--1);
+  background: var(--color-brand--2);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(69, 123, 157, 0.8);
+}
