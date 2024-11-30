@@ -1,4 +1,7 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 100dvh;
   background: linear-gradient(180deg, #1d3557 0%, #457b9d 100%);
 }
