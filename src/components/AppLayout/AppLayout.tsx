@@ -1,9 +1,11 @@
-import { Outlet } from 'react-router';
-import Header from '../Header/Header';
+import { Outlet } from "react-router";
+import Header from "../Header/Header";
+
+import styles from "./AppLayout.module.css";
 
 function AppLayout() {
   return (
-    <div>
+    <div className={styles.container}>
       <Header />
       <Outlet />
     </div>

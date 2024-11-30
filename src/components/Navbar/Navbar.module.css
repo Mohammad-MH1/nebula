@@ -1,4 +1,4 @@
-.navList {
+.navbar ul {
   list-style: none;
   display: flex;
   align-items: center;
@@ -10,4 +10,18 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
+  background-color: rgba(29, 53, 87, 0.9);
+  border-radius: 1rem;
+  padding: 1.2rem 2.4rem;
+}
+
+.navbar li {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+.navbar li:hover {
+  background-color: var(--color-brand--2);
+  color: var(--color-brand--1);
 }

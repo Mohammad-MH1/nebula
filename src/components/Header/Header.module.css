@@ -1,5 +1,13 @@
 .sectionHeader {
   padding: 1.2rem 2.4rem;
+  background-color: rgba(29, 53, 87, 0.9);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sectionHeader img {
+  width: 6.2rem;
+  height: 6.2rem;
 }
 
 .headerContainer {
@@ -9,11 +17,6 @@
   font-size: 2rem;
   max-width: 140rem;
   margin: 0 auto;
-}
-
-.headerLogo {
-  width: 6.2rem;
-  height: 6.2rem;
 }
 
 .headerTextLogo {
