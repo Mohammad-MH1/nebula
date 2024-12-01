@@ -27,3 +27,7 @@
 .navbar a:hover {
   color: var(--color-brand--2);
 }
+
+.navbar a:global(.active) {
+  border-bottom: 3px solid var(--color-brand--2);
+}
