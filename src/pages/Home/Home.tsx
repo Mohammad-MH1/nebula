@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import styles from "./Home.module.css";
 
 function Home() {
@@ -6,7 +7,7 @@ function Home() {
       <h1>Nebula shop</h1>
       <p>Unleash Your Inner Star with Our Collection </p>
       <p>Shop Now and Let Your Style Shine!</p>
-      <button>Start Exploring</button>
+      <Link to="/products">Start Exploring</Link>
     </div>
   );
 }
