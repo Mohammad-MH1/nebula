@@ -1,0 +1,101 @@
+.productCard {
+  background-color: #344968;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.productContain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.productBody {
+  padding: 1rem;
+}
+
+.productImage {
+  width: 100%;
+  height: 18rem;
+  object-fit: contain;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.productTitle {
+  font-size: 1.8rem;
+  color: var(--color-light--2);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.productPrice {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-text--2);
+}
+
+.productCategory {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-text--2);
+  text-transform: capitalize;
+  padding: 0.3rem 0.6rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-brand--2);
+}
+
+.productRating {
+  display: flex;
+  align-items: center;
+
+  gap: 0.4rem;
+  font-size: 1.5rem;
+  color: var(--color-brand--2);
+}
+
+.productRating svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.productPriceAndButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addToCartButton {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--color-brand--1);
+  color: var(--color-background);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.addToCartButton:hover {
+  color: var(--color-brand--1);
+  background-color: var(--color-brand--2);
+}
