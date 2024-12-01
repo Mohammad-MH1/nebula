@@ -1,18 +1,6 @@
 import { HiStar } from "react-icons/hi2";
 import styles from "./ProductCard.module.css";
-
-type Product = {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-  rating: {
-    rate: number;
-    count: number;
-  };
-};
+import { Product } from "../../services/productsAPI";
 
 function ProductCard({ product }: { product: Product }) {
   return (
