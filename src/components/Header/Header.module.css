@@ -30,3 +30,9 @@
   width: 3rem;
   height: 3rem;
 }
+
+.sectionHeader a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--color-text--1);
+}
