@@ -1,0 +1,25 @@
+.productsHeader {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+}
+
+.productsHeader p {
+  font-size: 1.6rem;
+}
+
+.productsHeader select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  background: var(--color-brand--1);
+  color: white;
+  font-size: 1.4rem;
+}
+
+.productsHeader select:focus {
+  outline: none;
+  border-color: var(--color-brand--2);
+}
