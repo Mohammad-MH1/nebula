@@ -39,7 +39,7 @@ Medium: 11px
 :root {
   --color-brand--1: #1d3557;
   --color-brand-1-shade: #172a46;
-  --color-brand-1-tint: #4a5d79;
+  --color-brand-1-tint: #344968;
   --color-brand--2: #f4a261;
   --color-brand-2-shade: #c3824e;
   --color-brand-2-tint: #f6b581;
@@ -68,7 +68,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--color-text--1);
   font-weight: 400;
   line-height: 1.6;
