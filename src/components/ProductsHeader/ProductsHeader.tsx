@@ -12,7 +12,7 @@ function ProductsHeader({
     <div className={styles.productsHeader}>
       <p>{filteredProducts?.length} number of products</p>
       <select
-        value={state.category}
+        value={state.sort}
         onChange={e => dispatch({ type: 'SET_SORT', payload: e.target.value })}
       >
         <option value='default'>Sort by Default</option>
