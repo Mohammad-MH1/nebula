@@ -3,10 +3,13 @@ import { useParams } from 'react-router';
 import styles from './ProductsDetail.module.css';
 import { useProduct } from '../../hooks/useProduct';
 import { HiStar } from 'react-icons/hi2';
+import ProductDetailSkeleton from './ProductDetailSkeleton';
 
 function ProductDetail() {
   const { id } = useParams<{ id: string }>();
-  const { product } = useProduct(id);
+  const { product, isLoading } = useProduct(id);
+
+  if (isLoading) return <ProductDetailSkeleton />;
 
   return (
     <section className={styles.productDetail}>
