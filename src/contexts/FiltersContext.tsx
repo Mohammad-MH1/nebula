@@ -19,7 +19,8 @@ type FiltersAction =
   | { type: 'SET_SEARCH'; payload: string }
   | { type: 'SET_CATEGORY'; payload: string }
   | { type: 'SET_SORT'; payload: string }
-  | { type: 'SET_PRICE_RANGE'; payload: [number, number] };
+  | { type: 'SET_PRICE_RANGE'; payload: [number, number] }
+  | { type: 'RESET' };
 
 const initialFiltersState: FiltersState = {
   search: '',
@@ -41,6 +42,8 @@ function filtersReducer(
       return { ...state, sort: action.payload };
     case 'SET_PRICE_RANGE':
       return { ...state, priceRange: action.payload };
+    case 'RESET':
+      return initialFiltersState;
     default:
       return state;
   }

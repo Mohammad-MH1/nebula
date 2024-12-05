@@ -64,6 +64,8 @@ function SideBar() {
       <p className={styles.priceText}>
         Price Range: ${state.priceRange[0]} - ${state.priceRange[1]}
       </p>
+
+      <button onClick={() => dispatch({ type: 'RESET' })}>Reset Filters</button>
     </aside>
   );
 }
