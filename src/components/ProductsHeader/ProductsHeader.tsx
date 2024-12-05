@@ -18,6 +18,8 @@ function ProductsHeader({
         <option value='default'>Sort by Default</option>
         <option value='asc'>Lowest Price</option>
         <option value='desc'>Highest Price</option>
+        <option value='rateAsc'>Lowest rating</option>
+        <option value='rateDesc'>Highest rating</option>
       </select>
     </div>
   );

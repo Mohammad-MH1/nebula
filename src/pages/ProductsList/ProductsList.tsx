@@ -16,7 +16,6 @@ function ProductsList() {
   return (
     <section className={styles.container}>
       <SideBar />
-
       <div>
         {isLoading ? (
           <div className={styles.productGrid}>

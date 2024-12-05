@@ -30,8 +30,15 @@ export function filterProducts(
 
   if (state.sort === 'asc') {
     return filteredProducts?.sort((a, b) => a.price - b.price);
-  } else if (state.sort === 'desc') {
+  }
+  if (state.sort === 'desc') {
     return filteredProducts?.sort((a, b) => b.price - a.price);
+  }
+  if (state.sort === 'rateAsc') {
+    return filteredProducts?.sort((a, b) => a.rating.rate - b.rating.rate);
+  }
+  if (state.sort === 'rateDesc') {
+    return filteredProducts?.sort((a, b) => b.rating.rate - a.rating.rate);
   }
 
   return filteredProducts;
