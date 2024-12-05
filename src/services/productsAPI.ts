@@ -1,4 +1,4 @@
-const BASE_URL = "https://fakestoreapi.com";
+const BASE_URL = 'https://fakestoreapi.com';
 
 export type Product = {
   id: number;
@@ -15,7 +15,14 @@ export type Product = {
 
 export async function getProducts(): Promise<Product[]> {
   const res = await fetch(`${BASE_URL}/products`);
-  if (!res.ok) throw Error("Failed getting products");
+  if (!res.ok) throw Error('Failed getting products');
+  const data = await res.json();
+  return data;
+}
+
+export async function getProduct(id: string | undefined): Promise<Product> {
+  const res = await fetch(`${BASE_URL}/products/${id}`);
+  if (!res.ok) throw Error('Failed getting product');
   const data = await res.json();
   return data;
 }
