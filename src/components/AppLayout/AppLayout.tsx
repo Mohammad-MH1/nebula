@@ -1,8 +1,9 @@
-import { Outlet } from "react-router";
-import Header from "../Header/Header";
+import { Outlet } from 'react-router';
+import Header from '../Header/Header';
 
-import styles from "./AppLayout.module.css";
-import Footer from "../Footer/Footer";
+import styles from './AppLayout.module.css';
+import Footer from '../Footer/Footer';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 function AppLayout() {
   return (
@@ -11,6 +12,7 @@ function AppLayout() {
       <main>
         <Outlet />
       </main>
+      <ScrollToTop />
       <Footer />
     </div>
   );
