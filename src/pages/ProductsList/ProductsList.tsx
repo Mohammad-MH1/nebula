@@ -18,16 +18,22 @@ function ProductsList() {
       <SideBar />
 
       <div>
-        <ProductsHeader />
-        <div className={styles.productGrid}>
-          {isLoading &&
-            Array.from({ length: 8 }).map((_, index) => (
+        {isLoading ? (
+          <div className={styles.productGrid}>
+            {Array.from({ length: 8 }).map((_, index) => (
               <ProductCardSkeleton key={index} />
             ))}
-          {filteredProducts?.map(product => (
-            <ProductCard product={product} key={product.id} />
-          ))}
-        </div>
+          </div>
+        ) : (
+          <>
+            <ProductsHeader filteredProducts={filteredProducts} />
+            <div className={styles.productGrid}>
+              {filteredProducts?.map(product => (
+                <ProductCard product={product} key={product.id} />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </section>
   );

@@ -1,11 +1,16 @@
 import { useFiltersContext } from '../../contexts/FiltersContext';
+import { Product } from '../../services/productsAPI';
 import styles from './ProductsHeader.module.css';
 
-function ProductsHeader() {
+function ProductsHeader({
+  filteredProducts,
+}: {
+  filteredProducts: Product[] | undefined;
+}) {
   const { state, dispatch } = useFiltersContext();
   return (
     <div className={styles.productsHeader}>
-      <p>X number of products</p>
+      <p>{filteredProducts?.length} number of products</p>
       <select
         value={state.category}
         onChange={e => dispatch({ type: 'SET_SORT', payload: e.target.value })}
