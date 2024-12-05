@@ -23,8 +23,8 @@ function App() {
               <Route path='products' element={<ProductsList />} />
               <Route path='products/:id' element={<ProductDetail />} />
               <Route path='about' element={<About />} />
+              <Route path='*' element={<PageNotFound />} />
             </Route>
-            <Route path='*' element={<PageNotFound />} />
           </Routes>
         </FiltersProvider>
       </BrowserRouter>

@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.image {
+  width: 300px;
+  max-width: 80%;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.homeLink {
+  padding: 10px 20px;
+  background-color: var(--color-brand--1);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.homeLink:hover {
+  color: var(--color-brand--1);
+  background-color: var(--color-brand--2);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(69, 123, 157, 0.8);
+}
