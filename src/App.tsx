@@ -9,6 +9,7 @@ import About from './pages/About/About';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
 import ProductsList from './pages/ProductsList/ProductsList';
 import FiltersProvider from './contexts/FiltersContext';
+import CartProvider from './contexts/CartContext';
 
 function App() {
   const queryClient = new QueryClient();
@@ -17,15 +18,17 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <FiltersProvider>
-          <Routes>
-            <Route path='/' element={<AppLayout />}>
-              <Route index element={<Home />} />
-              <Route path='products' element={<ProductsList />} />
-              <Route path='products/:id' element={<ProductDetail />} />
-              <Route path='about' element={<About />} />
-              <Route path='*' element={<PageNotFound />} />
-            </Route>
-          </Routes>
+          <CartProvider>
+            <Routes>
+              <Route path='/' element={<AppLayout />}>
+                <Route index element={<Home />} />
+                <Route path='products' element={<ProductsList />} />
+                <Route path='products/:id' element={<ProductDetail />} />
+                <Route path='about' element={<About />} />
+                <Route path='*' element={<PageNotFound />} />
+              </Route>
+            </Routes>
+          </CartProvider>
         </FiltersProvider>
       </BrowserRouter>
       <ReactQueryDevtools />
