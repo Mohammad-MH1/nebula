@@ -36,3 +36,33 @@ a:visited {
   text-decoration: none;
   color: var(--color-text--1);
 }
+
+.sectionHeader svg {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.sectionHeader svg:hover {
+  color: var(--color-brand--2);
+  transform: scale(1.05);
+}
+
+.sectionHeader button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(+50%, -50%);
+  background: var(--color-brand--2);
+  color: var(--color-brand--1);
+  border: none;
+  padding: 0.2rem 0.6rem;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.container {
+  position: relative;
+}

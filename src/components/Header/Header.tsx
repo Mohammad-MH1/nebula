@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 import { useCart } from '../../contexts/CartContext';
 
 function Header() {
-  const { toggleCart } = useCart();
+  const { toggleCart, cartItems } = useCart();
   return (
     <header className={styles.sectionHeader}>
       <div className={styles.headerContainer}>
@@ -22,10 +22,13 @@ function Header() {
         </Link>
         <Navbar />
 
-        <HiOutlineShoppingCart
-          onClick={toggleCart}
-          className={styles.headerCart}
-        />
+        <div className={styles.container}>
+          <HiOutlineShoppingCart
+            onClick={toggleCart}
+            className={styles.headerCart}
+          />
+          {cartItems.length > 0 && <button>{cartItems.length}</button>}
+        </div>
       </div>
     </header>
   );
