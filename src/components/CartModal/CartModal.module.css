@@ -21,8 +21,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
-  overflow: hidden;
 }
 
 .header {
@@ -108,7 +106,7 @@
   padding-top: 2rem;
   font-weight: bold;
   font-size: 2.4rem;
-  height: 3rem;
+  height: 6rem;
 }
 
 .quantity {
@@ -135,4 +133,23 @@
 .empty {
   font-size: 3rem;
   text-align: center;
+}
+
+.clear {
+  background: var(--color-brand-1-tint);
+  color: var(--color-text--1);
+  padding: 1.2rem 2.4rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.clear:hover {
+  color: var(--color-brand--1);
+  background: var(--color-brand--2);
+  box-shadow: 0 0 10px rgba(69, 123, 157, 0.8);
 }

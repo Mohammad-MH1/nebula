@@ -4,8 +4,15 @@ import { useCart } from '../../contexts/CartContext';
 import { useEffect, useRef } from 'react';
 
 function CartModal() {
-  const { cartItems, isCartOpen, toggleCart, removeItem, deleteItem, addItem } =
-    useCart();
+  const {
+    cartItems,
+    isCartOpen,
+    toggleCart,
+    removeItem,
+    deleteItem,
+    addItem,
+    clearCart,
+  } = useCart();
 
   const modalRef = useRef<HTMLDivElement>(null);
   const handleClickOutside = (e: MouseEvent) => {
@@ -103,6 +110,9 @@ function CartModal() {
                 .reduce((acc, item) => acc + item.price * item.quantity, 0)
                 .toFixed(2)}
             </p>
+            <button className={styles.clear} onClick={() => clearCart()}>
+              Clear Cart
+            </button>
           </footer>
         )}
       </div>
