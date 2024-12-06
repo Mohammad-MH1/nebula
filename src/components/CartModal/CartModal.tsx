@@ -1,16 +1,36 @@
 import styles from './CartModal.module.css';
 import { HiMiniXMark } from 'react-icons/hi2';
 import { useCart } from '../../contexts/CartContext';
+import { useEffect, useRef } from 'react';
 
 function CartModal() {
   const { cartItems, isCartOpen, toggleCart, removeItem, deleteItem, addItem } =
     useCart();
 
+  const modalRef = useRef<HTMLDivElement>(null);
+  const handleClickOutside = (e: MouseEvent) => {
+    if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
+      toggleCart();
+    }
+  };
+
+  useEffect(() => {
+    if (isCartOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isCartOpen]);
+
   if (!isCartOpen) return null;
 
   return (
     <div className={styles.overlay}>
-      <div className={styles.modal}>
+      <div className={styles.modal} ref={modalRef}>
         <header className={styles.header}>
           <h2>Shopping Cart</h2>
           <button onClick={() => toggleCart()} className={styles.closeButton}>
