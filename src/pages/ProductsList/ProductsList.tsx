@@ -25,12 +25,20 @@ function ProductsList() {
           </div>
         ) : (
           <>
-            <ProductsHeader filteredProducts={filteredProducts} />
-            <div className={styles.productGrid}>
-              {filteredProducts?.map(product => (
-                <ProductCard product={product} key={product.id} />
-              ))}
-            </div>
+            {filteredProducts?.length !== 0 ? (
+              <>
+                <ProductsHeader filteredProducts={filteredProducts} />
+                <div className={styles.productGrid}>
+                  {filteredProducts?.map(product => (
+                    <ProductCard product={product} key={product.id} />
+                  ))}
+                </div>
+              </>
+            ) : (
+              <div className={styles.textContainer}>
+                <p>No Products found. Change your filters !</p>
+              </div>
+            )}
           </>
         )}
       </div>

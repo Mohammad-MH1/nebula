@@ -14,3 +14,14 @@
 
   border-radius: 1rem;
 }
+
+.textContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.6rem;
+  background-color: var(--color-brand-1-shade);
+  border-radius: 1rem;
+  margin-top: 20rem;
+  padding: 3rem;
+}
