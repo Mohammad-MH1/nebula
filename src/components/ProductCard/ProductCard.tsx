@@ -51,16 +51,16 @@ function ProductCard({ product }: { product: Product }) {
               Add to Cart
             </button>
           ) : (
-            <div className='quantityControls'>
+            <div className={styles.quantityControls}>
               <button
-                className='decrementButton'
+                className={styles.decrementButton}
                 onClick={() => removeItem(cartItem)}
               >
                 -
               </button>
               <span>{cartItem.quantity}</span>
               <button
-                className='incrementButton'
+                className={styles.incrementButton}
                 onClick={() => addItem(cartItem)}
               >
                 +

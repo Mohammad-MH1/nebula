@@ -14,7 +14,7 @@
 .modal {
   background: var(--color-brand--1);
   width: 90%;
-  max-width: 90rem;
+  max-width: 100rem;
   max-height: 75vh;
   border-radius: 8px;
   padding: 2rem;
@@ -109,4 +109,30 @@
   font-weight: bold;
   font-size: 2.4rem;
   height: 3rem;
+}
+
+.quantity {
+  margin: 0.5rem;
+}
+
+.incrementButton,
+.decrementButton {
+  background-color: var(--color-brand-1-tint);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.incrementButton:hover,
+.decrementButton:hover {
+  color: var(--color-brand--1);
+  background-color: var(--color-brand--2);
+}
+
+.empty {
+  font-size: 3rem;
+  text-align: center;
 }

@@ -99,3 +99,28 @@
   color: var(--color-brand--1);
   background-color: var(--color-brand--2);
 }
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+.incrementButton,
+.decrementButton {
+  background-color: var(--color-brand--1);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.incrementButton:hover,
+.decrementButton:hover {
+  color: var(--color-brand--1);
+  background-color: var(--color-brand--2);
+}

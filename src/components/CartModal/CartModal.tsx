@@ -19,7 +19,7 @@ function CartModal() {
         </header>
         <div className={styles.cartContent}>
           {cartItems.length === 0 ? (
-            <p>Your cart is empty</p>
+            <p className={styles.empty}>Your cart is empty</p>
           ) : (
             <table className={styles.cartTable}>
               <thead>
@@ -46,9 +46,19 @@ function CartModal() {
                     </td>
                     <td>{item.category}</td>
                     <td>
-                      <button onClick={() => removeItem(item)}>-</button>
-                      <span>{item.quantity}</span>
-                      <button onClick={() => addItem(item)}>+</button>
+                      <button
+                        className={styles.decrementButton}
+                        onClick={() => removeItem(item)}
+                      >
+                        -
+                      </button>
+                      <span className={styles.quantity}>{item.quantity}</span>
+                      <button
+                        className={styles.incrementButton}
+                        onClick={() => addItem(item)}
+                      >
+                        +
+                      </button>
                     </td>
                     <td>{(item.price * item.quantity).toFixed(2)}</td>
                     <td>
@@ -65,14 +75,16 @@ function CartModal() {
             </table>
           )}
         </div>
-        <footer className={styles.footer}>
-          <p>
-            Total Cost: $
-            {cartItems
-              .reduce((acc, item) => acc + item.price * item.quantity, 0)
-              .toFixed(2)}
-          </p>
-        </footer>
+        {cartItems.length > 0 && (
+          <footer className={styles.footer}>
+            <p>
+              Total Cost: $
+              {cartItems
+                .reduce((acc, item) => acc + item.price * item.quantity, 0)
+                .toFixed(2)}
+            </p>
+          </footer>
+        )}
       </div>
     </div>
   );
