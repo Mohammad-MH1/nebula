@@ -36,6 +36,7 @@ function ProductsList() {
               </>
             ) : (
               <div className={styles.textContainer}>
+                <img src='/noproductfound.png' alt='no products found' />
                 <p>No Products found. Change your filters !</p>
               </div>
             )}
