@@ -1,6 +1,6 @@
 .sectionHeader {
   padding: 1.2rem 2.4rem;
-  background-color: rgba(29, 53, 87, 0.9);
+  background-color: var(--color-brand--1);
   border-radius: 0 0 10px 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -64,5 +64,15 @@ a:visited {
 }
 
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.cartContainer {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -4,6 +4,7 @@ import styles from './Header.module.css';
 import Navbar from '../Navbar/Navbar';
 import { Link } from 'react-router';
 import { useCart } from '../../contexts/CartContext';
+import Switch from '../Switch/Switch';
 
 function Header() {
   const { toggleCart, cartItems } = useCart();
@@ -23,11 +24,14 @@ function Header() {
         <Navbar />
 
         <div className={styles.container}>
-          <HiOutlineShoppingCart
-            onClick={toggleCart}
-            className={styles.headerCart}
-          />
-          {cartItems.length > 0 && <button>{cartItems.length}</button>}
+          <div className={styles.cartContainer}>
+            <HiOutlineShoppingCart
+              onClick={toggleCart}
+              className={styles.headerCart}
+            />
+            {cartItems.length > 0 && <button>{cartItems.length}</button>}
+          </div>
+          <Switch />
         </div>
       </div>
     </header>

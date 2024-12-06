@@ -40,6 +40,7 @@ Medium: 11px
   --color-brand--1: #1d3557;
   --color-brand-1-shade: #172a46;
   --color-brand-1-tint: #344968;
+  --color-brand-1-tint2: #457b9d;
   --color-brand--2: #f4a261;
   --color-brand-2-shade: #c3824e;
   --color-brand-2-tint: #f6b581;
@@ -53,6 +54,27 @@ Medium: 11px
   --color-light-gray: #bebebe;
   --color-light--1: #aaa;
   --color-light--2: #ececec;
+  --color-light--3: #d6dee0;
+}
+
+[data-theme='light'] {
+  --color-brand--1: #5ca0ca;
+  --color-brand-1-shade: #4a80a2;
+  --color-brand-1-tint: #7db3d5;
+  --color-brand-1-tint2: #7db3d5;
+  --color-brand--2: #eaec7a;
+  --color-brand-2-shade: #a5a74f;
+  --color-brand-2-tint: #e7e986;
+  --color-text--1: #141f2e;
+  --color-text--2: #12233a;
+
+  --color-dark--0: #242a2e;
+  --color-dark--1: #2d3439;
+  --color-dark--2: #42484d;
+  --color-dark-gray: #767676;
+  --color-light-gray: #bebebe;
+  --color-light--1: #aaa;
+  --color-light--2: #12233a;
   --color-light--3: #d6dee0;
 }
 

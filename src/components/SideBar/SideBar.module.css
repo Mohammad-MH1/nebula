@@ -26,6 +26,10 @@
   font-size: 1.4rem;
 }
 
+.sidebar input::placeholder {
+  color: white;
+}
+
 .sidebar input:focus,
 .sidebar select:focus {
   outline: none;
