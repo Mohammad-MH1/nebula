@@ -1,10 +1,11 @@
 import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi2';
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, useEffect } from 'react';
 
 import styles from './Switch.module.css';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
 
 function Switch() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useLocalStorage<'dark' | 'light'>('dark', 'theme');
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
     setTheme(e.target.checked ? 'light' : 'dark');
