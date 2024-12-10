@@ -13,6 +13,13 @@ function ProductsList() {
 
   const filteredProducts = products && filterProducts(products, state);
 
+  if (error)
+    return (
+      <div className={styles.error}>
+        <img src='/error.png' alt='error' />
+        <p>{error.message}</p>
+      </div>
+    );
   return (
     <section className={styles.container}>
       <SideBar />
