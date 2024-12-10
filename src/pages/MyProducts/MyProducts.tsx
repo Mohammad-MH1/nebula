@@ -10,9 +10,12 @@ function MyProducts() {
     <div className={stylesTwo.container}>
       <h1 className={stylesTwo.heading}>My Products</h1>
       {products.length === 0 ? (
-        <p className={stylesTwo.emptyMessage}>
-          You have not added any products yet.
-        </p>
+        <div className={stylesTwo.notFound}>
+          <p className={stylesTwo.emptyMessage}>
+            You have not added any products yet.
+          </p>
+          <Link to='/products/form'>Create Product</Link>
+        </div>
       ) : (
         <div className={stylesTwo.grid}>
           {products.map(product => (
