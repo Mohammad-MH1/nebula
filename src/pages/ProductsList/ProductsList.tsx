@@ -16,7 +16,7 @@ function ProductsList() {
   if (error)
     return (
       <div className={styles.error}>
-        <img src='/error.png' alt='error' />
+        <img src={`${import.meta.env.BASE_URL}/error.png`} alt='error' />
         <p>{error.message}</p>
       </div>
     );
@@ -43,7 +43,10 @@ function ProductsList() {
               </>
             ) : (
               <div className={styles.textContainer}>
-                <img src='/noproductfound.png' alt='no products found' />
+                <img
+                  src={`${import.meta.env.BASE_URL}/noproductfound.png`}
+                  alt='no products found'
+                />
                 <p>No Products found. Change your filters !</p>
               </div>
             )}

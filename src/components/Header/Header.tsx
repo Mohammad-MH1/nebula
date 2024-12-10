@@ -15,7 +15,7 @@ function Header() {
           <div className={styles.headerTextLogo}>
             <img
               className={styles.headerLogo}
-              src='/header-logo.png'
+              src={`${import.meta.env.BASE_URL}/header-logo.png`}
               alt='header logo'
             />
             <p>Nebula</p>

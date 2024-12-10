@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from 'react-router';
+import { BrowserRouter, Route, Routes } from 'react-router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <HashRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <FiltersProvider>
           <CartProvider>
             <MyProductsProvider>
@@ -39,7 +39,7 @@ function App() {
             </MyProductsProvider>
           </CartProvider>
         </FiltersProvider>
-      </HashRouter>
+      </BrowserRouter>
       <ReactQueryDevtools />
     </QueryClientProvider>
   );
