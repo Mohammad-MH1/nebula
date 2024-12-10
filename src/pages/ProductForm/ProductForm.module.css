@@ -1,0 +1,105 @@
+.container {
+  padding: 2rem;
+  max-width: 70rem;
+  margin: 2rem auto;
+  border-radius: 0.5rem;
+  background-color: var(--color-brand-1-tint);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--color-brand--2);
+}
+
+.textarea {
+  height: 10rem;
+  resize: none;
+}
+
+.button {
+  width: 100%;
+  padding: 0.7rem 1.5rem;
+  background: var(--color-brand--2);
+  border: none;
+  background: var(--color-brand--1);
+  color: var(--color-text--1);
+  border-radius: 5px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--color-brand--1);
+  background: var(--color-brand--2);
+  transform: scale(1.01);
+  box-shadow: 0 0 10px rgba(69, 123, 157, 0.8);
+}
+
+.error {
+  color: #dc3545;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+input[type='file']::file-selector-button {
+  color: var(--color-brand--1);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  height: 30px;
+  cursor: pointer;
+  background-color: var(--color-brand--2);
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  transition: background-color 200ms;
+}
+
+input[type='file']::file-selector-button:hover {
+  box-shadow: 0 0 10px rgba(69, 123, 157, 0.8);
+}
+
+input[type='file']::file-selector-button:active {
+  background-color: var(--color-brand-2-shade);
+}
+
+.select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  outline: none;
+}

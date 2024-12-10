@@ -10,6 +10,9 @@ import ProductDetail from './pages/ProductDetail/ProductDetail';
 import ProductsList from './pages/ProductsList/ProductsList';
 import FiltersProvider from './contexts/FiltersContext';
 import CartProvider from './contexts/CartContext';
+import MyProductsProvider from './contexts/MyProductsContext';
+import ProductForm from './pages/ProductForm/ProductForm';
+import MyProducts from './pages/MyProducts/MyProducts';
 
 function App() {
   const queryClient = new QueryClient();
@@ -19,15 +22,26 @@ function App() {
       <BrowserRouter>
         <FiltersProvider>
           <CartProvider>
-            <Routes>
-              <Route path='/' element={<AppLayout />}>
-                <Route index element={<Home />} />
-                <Route path='products' element={<ProductsList />} />
-                <Route path='products/:id' element={<ProductDetail />} />
-                <Route path='about' element={<About />} />
-                <Route path='*' element={<PageNotFound />} />
-              </Route>
-            </Routes>
+            <MyProductsProvider>
+              <Routes>
+                <Route path='/' element={<AppLayout />}>
+                  <Route index element={<Home />} />
+                  <Route path='products' element={<ProductsList />} />
+                  <Route path='products/:id' element={<ProductDetail />} />
+                  <Route path='about' element={<About />} />
+                  <Route
+                    path='/products/form'
+                    element={<ProductForm mode='create' />}
+                  />
+                  <Route
+                    path='/products/form/:id'
+                    element={<ProductForm mode='edit' />}
+                  />
+                  <Route path='/my-products' element={<MyProducts />} />
+                  <Route path='*' element={<PageNotFound />} />
+                </Route>
+              </Routes>
+            </MyProductsProvider>
           </CartProvider>
         </FiltersProvider>
       </BrowserRouter>
