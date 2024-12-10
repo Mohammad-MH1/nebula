@@ -14,7 +14,7 @@ function MyProducts() {
           <p className={stylesTwo.emptyMessage}>
             You have not added any products yet.
           </p>
-          <Link to='/products/form'>Create Product</Link>
+          <Link to='/form'>Create Product</Link>
         </div>
       ) : (
         <div className={stylesTwo.grid}>
@@ -33,7 +33,7 @@ function MyProducts() {
                 </div>
                 <div className={stylesTwo.actions}>
                   <Link
-                    to={`/products/form/${product.id}`}
+                    to={`/form/${product.id}`}
                     className={stylesTwo.editButton}
                   >
                     Edit

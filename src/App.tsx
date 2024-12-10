@@ -5,7 +5,6 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import Home from './pages/Home/Home';
 import AppLayout from './components/AppLayout/AppLayout';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
-import About from './pages/About/About';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
 import ProductsList from './pages/ProductsList/ProductsList';
 import FiltersProvider from './contexts/FiltersContext';
@@ -28,13 +27,9 @@ function App() {
                   <Route index element={<Home />} />
                   <Route path='products' element={<ProductsList />} />
                   <Route path='products/:id' element={<ProductDetail />} />
-                  <Route path='about' element={<About />} />
+                  <Route path='/form' element={<ProductForm mode='create' />} />
                   <Route
-                    path='/products/form'
-                    element={<ProductForm mode='create' />}
-                  />
-                  <Route
-                    path='/products/form/:id'
+                    path='/form/:id'
                     element={<ProductForm mode='edit' />}
                   />
                   <Route path='/my-products' element={<MyProducts />} />
